@@ -1,0 +1,17 @@
+.landing{
+display:flex;
+align-items: center;
+justify-content: center;
+height: 500px;
+background-color: darkgoldenrod;
+}
+
+.landing .button{
+    display: inline-block;
+    text-decoration: none;
+    background-color: aqua;
+    border-radius: 10%;
+    color:black;
+    padding:1px 10px;
+    margin:10px;
+}
