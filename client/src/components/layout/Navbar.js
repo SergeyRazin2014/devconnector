@@ -12,6 +12,7 @@ const Navbar = (props) => {
     const authLinks = (
         <ul className="rightNavbar">
             <li><a onClick={props.logout} href="#">Logout</a></li>
+            <li> <Link to="/dashboard">Dashboard</Link> </li>
         </ul>
     );
 

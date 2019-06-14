@@ -1,0 +1,11 @@
+.profileFormContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputForm {
+    width: 30%;
+    margin:5px;
+    padding:4px;
+}
