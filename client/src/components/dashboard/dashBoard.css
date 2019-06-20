@@ -1,0 +1,9 @@
+.daschBoard_container {
+    display: flex;
+    padding:10px;
+
+}
+
+.table-bordered{
+    margin-top:20px;
+}

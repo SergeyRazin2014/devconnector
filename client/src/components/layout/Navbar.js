@@ -12,6 +12,7 @@ const Navbar = (props) => {
     const authLinks = (
         <ul className="rightNavbar">
             <li><a onClick={props.logout} href="#">Logout</a></li>
+            <li> <Link to="/profiles">Profiles</Link></li>
             <li> <Link to="/dashboard">Dashboard</Link> </li>
         </ul>
     );
@@ -20,6 +21,7 @@ const Navbar = (props) => {
     const guestLinks = (
         <ul className="rightNavbar">
             <li><a href="#">Developers</a></li>
+            <li> <Link to="/profiles">Profiles</Link></li>
             <li> <Link to="/register">Register</Link></li>
             <li> <Link to="/login">Login</Link></li>
         </ul>

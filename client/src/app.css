@@ -6,10 +6,39 @@
 .alert {
     border: 1px solid black;
     margin: 10px;
-    padding:10px;
+    padding: 10px;
 }
 
 .alert-danger {
     background-color: crimson;
+}
+
+.btn {
+    border: 1px solid blue;
+    margin-left: 10px;
+    padding: 5px;
+    color: white;
+    background-color: blue;
+    border-radius: 5%;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:first-child{
+    margin-left: 0;
+}
+
+.btn:hover{
+    background-color: midnightblue;
+}
+
+.table-bordered {
+    border: 1px solid blue;
+    border-collapse: collapse;
+}
+
+.table-bordered th, .table-bordered td {
+    border: 1px solid blue;
+    padding:5px;
 }
 

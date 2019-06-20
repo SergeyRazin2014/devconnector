@@ -4,10 +4,13 @@ import { connect } from 'react-redux';
 import { getCurrentProfile } from '../../actions/profile';
 import Spinner from '../layout/Spinner';
 import { Link } from 'react-router-dom';
+import DashboardActions from './DashboardActions';
+import Experience from './Experience';
+import Education from './Education';
+
+import './dashBoard.css';
 
 const DashBoard = ({ getCurrentProfile, auth: { user }, profile: { profile, loading } }) => {
-
-    debugger;
 
     //ВЫПОЛНЯЕТЯ 1 РАЗ ПРИ ЗАГРУЗКЕ КОМПОНЕНТА
     useEffect(() => {
@@ -16,10 +19,21 @@ const DashBoard = ({ getCurrentProfile, auth: { user }, profile: { profile, load
 
     return loading && profile === null ?
         <Spinner /> :
-        <Fragment>
-            Welcome {user && user.name}
-            {profile !== null ? <>profile test</> : <>no profile <br /> <Link to='/create-profile'>Add profile</Link></>}
-        </Fragment>
+        <>
+            <div className='daschBoard_container'>
+                Welcome {user && user.name}
+            </div>
+
+            {profile !== null
+                ? (
+                    <>
+                        <DashboardActions />
+                        <Experience experience={profile.experience} />
+                        <Education educations={profile.education} />
+                    </>
+                )
+                : <>no profile <br /> <Link to='/create-profile'>Add profile</Link></>}
+        </>
 
 }
 

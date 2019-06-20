@@ -246,6 +246,7 @@ router.put('/education', [auth, [
     check('fieldofstudy', 'Field of study is required').not().isEmpty(),
     check('from', 'From date is required').not().isEmpty(),
 ]], async (req, res) => {
+
     const errors = validationResult(req);
 
     if (!errors.isEmpty) {
@@ -280,11 +281,11 @@ router.put('/education', [auth, [
 
         await profile.save();
 
-        res.json(profile);
+        return res.json(profile);
 
     } catch (err) {
         console.error(err.message);
-        res.status(500).send('Server error');
+        return res.status(500).send('Server error');
     }
 
 });
